@@ -195,7 +195,7 @@ def main():
         # PLOTS    
         if graph_type == 'Barras':
             sns.barplot(x = bank_raw_target_perc.index, 
-                        y = 'proportion',
+                        y = 'y',
                         data = bank_raw_target_perc, 
                         ax = ax[0])
             ax[0].bar_label(ax[0].containers[0])
@@ -203,18 +203,18 @@ def main():
                             fontweight ="bold")
             
             sns.barplot(x = bank_target_perc.index, 
-                        y = 'proportion', 
+                        y = 'y', 
                         data = bank_target_perc, 
                         ax = ax[1])
             ax[1].bar_label(ax[1].containers[0])
             ax[1].set_title('Dados filtrados',
                             fontweight ="bold")
         else:
-            bank_raw_target_perc.plot(kind='pie', autopct='%.2f', y='proportion', ax = ax[0])
+            bank_raw_target_perc.plot(kind='pie', autopct='%.2f', y='y', ax = ax[0])
             ax[0].set_title('Dados brutos',
                             fontweight ="bold")
             
-            bank_target_perc.plot(kind='pie', autopct='%.2f', y='proportion', ax = ax[1])
+            bank_target_perc.plot(kind='pie', autopct='%.2f', y='y', ax = ax[1])
             ax[1].set_title('Dados filtrados',
                             fontweight ="bold")
 
